@@ -24,8 +24,8 @@ public class Brand implements Comparable<Brand>{
         brands.add(new Brand(9,"Monster"));
 
         return brands;
-
     }
+
     public static String brand(int id) {
         for(Brand brand : brands()) {
             if(brand.getId() == id) {
