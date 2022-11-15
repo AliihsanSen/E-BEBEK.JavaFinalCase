@@ -2,6 +2,7 @@ package PatikaStore1;
 
 public class Main {
     public static void main(String[] args) {
-        new PatikaStore();
+        PatikaStore patikaStore = new PatikaStore();
+        patikaStore.run();
     }
 }
