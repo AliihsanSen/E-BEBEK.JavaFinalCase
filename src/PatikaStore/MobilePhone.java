@@ -134,9 +134,9 @@ public class MobilePhone {
 
     public static List<MobilePhone> mobilePhones() {
 
-        mobilePhone.add(new MobilePhone(1, 3199, 0.0, 5, "Samsung Galaxy A51", Brand.brand(1), 6, 6.5, 128, 4000, "Siyah"));
-        mobilePhone.add(new MobilePhone(2, 7379, 0.0, 5, "iPhone 11 64 GB", Brand.brand(3), 6, 6.1, 64, 3046, "Mavi"));
-        mobilePhone.add(new MobilePhone(3, 4012, 0.0, 5, "Redmi Note 10 Pro 8GB", Brand.brand(8), 12, 6.5, 128, 4000, "Beyaz"));
+        mobilePhone.add(new MobilePhone(1, 3199, 0.0, 5, "Samsung Galaxy A52", Brand.brand(1), 6, 6.5, 128, 4000, "Siyah"));
+        mobilePhone.add(new MobilePhone(2, 7379, 0.0, 5, "iPhone 12 64 GB", Brand.brand(3), 6, 6.1, 64, 3046, "Mavi"));
+        mobilePhone.add(new MobilePhone(3, 4012, 0.0, 5, "Redmi Note 11 Pro 8GB", Brand.brand(8), 12, 6.5, 128, 4000, "Gri"));
 
         return mobilePhone;
     }
