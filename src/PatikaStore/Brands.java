@@ -1,4 +1,4 @@
 package PatikaStore;
 
-public class Main {
+public class Brands {
 }
