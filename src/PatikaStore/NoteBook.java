@@ -115,9 +115,9 @@ public class NoteBook {private int id;
     }
     public static List<NoteBook> notebooks() {
 
-        notebook.add(new NoteBook(1, 3199.0, 0.0, 5, "HUAWEI Matebook 14", Brand.brand(4), 16, 14, 512));
-        notebook.add(new NoteBook(2,7379.0, 0.0, 5, "LENOVO V14 IGL ", Brand.brand(2), 8, 14, 1024));
-        notebook.add(new NoteBook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming", Brand.brand(6), 32, 15.6,2048));
+        notebook.add(new NoteBook(1, 3199.0, 0.0, 5, "HUAWEI Matebook D15", Brand.brand(4), 16, 14, 512));
+        notebook.add(new NoteBook(2,7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
+        notebook.add(new NoteBook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6,2048));
         return notebook;
     }
 
