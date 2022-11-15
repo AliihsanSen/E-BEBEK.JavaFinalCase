@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int n = 0 ;
+        int n = 0;
         NoteBook.notebooks();
         MobilePhone.mobilePhones();
 
-        while(n == 0 ) {
+        while (n == 0) {
             Scanner input = new Scanner(System.in);
 
             System.out.println("PatikaStore Ürün Yönetim Paneli !\n");
@@ -23,72 +23,88 @@ public class Main {
                 case 1:
                     System.out.println("\nNotebook Listesi\n");
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
-                    System.out.println("| ID \t| ÜrünAdı \t| Fiyat \t| Marka \t| Depolama \t| Ekran | Ram\t| " );
+                    System.out.println(
+                            "| ID | Product Name                  | Price         | Brand     | Storage   | Screen Size  | RAM        |");
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
-                    for(NoteBook notebook : NoteBook.notebook) {
-                        System.out.println("| " +notebook.getId() + "" +
+                    for (NoteBook notebook : NoteBook.notebook) {
+                        System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                notebook.getId(),
+                                notebook.getProductName(),
+                                notebook.getUnitPrice(), notebook.getBrandName(),
+                                notebook.getMemory(), notebook.getScreenSize(), notebook.getRam());
+                        /*System.out.println("| " +notebook.getId() + "" +
                                 "\t| "+ notebook.getProductName() +
                                 "\t| " + notebook.getUnitPrice() +
                                 "\t| " + notebook.getBrandName() +
                                 "\t| " + notebook.getMemory() +
                                 "\t| " + notebook.getScreenSize() +
-                                "\t| " + notebook.getRam() + "\t| ");
+                                "\t| " + notebook.getRam() + "\t| ");*/
                         System.out.println();
                     }
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
                     System.out.println("Ürün eklemek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     add = input.nextInt();
-                    if(add == 1) {
+                    if (add == 1) {
                         NoteBook.add();
                         System.out.println("Ürün eklendi");
-                        for(NoteBook notebook : NoteBook.notebook) {
-                            System.out.println("| " +notebook.getId() +
+                        for (NoteBook notebook : NoteBook.notebook) {
+                            System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                    notebook.getId(),
+                                    notebook.getProductName(),
+                                    notebook.getUnitPrice(), notebook.getBrandName(),
+                                    notebook.getMemory(), notebook.getScreenSize(), notebook.getRam());
+                            /*System.out.println("| " +notebook.getId() +
                                     "\t| "+ notebook.getProductName() +
                                     "\t| " + notebook.getUnitPrice() +
                                     "\t| " + notebook.getBrandName() +
                                     "\t| " + notebook.getMemory() +
                                     "\t| " + notebook.getScreenSize() +
-                                    "\t| " + notebook.getRam() + "\t| ");
+                                    "\t| " + notebook.getRam() + "\t| ");*/
                             System.out.println();
                         }
                     }
-                    if(add == 2) {
+                    if (add == 2) {
 
-                    }
-                    else {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     System.out.println("Ürün silmek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     int delete = input.nextInt();
-                    if(delete == 1) {
+                    if (delete == 1) {
                         System.out.println("Silmek istediğiniz ürünün id sini giriniz : ");
                         System.out.print("Seçim : ");
                         int id = input.nextInt();
-                        if(NoteBook.remove(id) == true) {
+                        if (NoteBook.remove(id) == true) {
                             System.out.println("Ürün silindi");
-                        }else {
+                        } else {
                             System.out.println("Ürün silinemedi");
                         }
                     }
-                    if(delete == 2) { }
-                    else {
+                    if (delete == 2) {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     System.out.println();
                     System.out.println("Ürün filtrelemek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     int filtre = input.nextInt();
-                    if(filtre == 1) {
+                    if (filtre == 1) {
                         System.out.println("Filtreleme için  : \n1-Id \n2-Marka ");
                         System.out.print("Seçim : ");
                         select = input.nextInt();
-                        if(select == 1) {
+                        if (select == 1) {
                             System.out.print("Filtrelemek istediğiniz Id yi giriniz : ");
                             int id = input.nextInt();
-                            for(MobilePhone mobilePhone : MobilePhone.filtreId(id)) {
-                                System.out.println("| " + mobilePhone.getId() +
+                            for (MobilePhone mobilePhone : MobilePhone.filtreId(id)) {
+                                System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                        mobilePhone.getId(),
+                                        mobilePhone.getProductName(),
+                                        mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                        mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
+                                        mobilePhone.getRam(), mobilePhone.getColor());
+                                /*System.out.println("| " + mobilePhone.getId() +
                                         "\t| "+ mobilePhone.getProductName() +
                                         "\t| " + mobilePhone.getUnitPrice() +
                                         "\t| " + mobilePhone.getBrandName() +
@@ -96,13 +112,13 @@ public class Main {
                                         "\t| " + mobilePhone.getScreenSize() +
                                         "\t| " + mobilePhone.getBatteryPower() +
                                         "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );
+                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
                                 System.out.println();
                             }
-                        }else if(select == 2) {
+                        } else if (select == 2) {
                             int i = 1;
-                            for(Brand brand : Brand.brands()) {
-                                System.out.println( i + " - " +brand.getName());
+                            for (Brand brand : Brand.brands()) {
+                                System.out.println(i + " - " + brand.getName());
                                 i++;
                             }
                             System.out.println();
@@ -110,8 +126,14 @@ public class Main {
                             int id = input.nextInt();
 
 
-                            for(MobilePhone mobilePhone : MobilePhone.filtreBrand(id)) {
-                                System.out.println("| " + mobilePhone.getId() +
+                            for (MobilePhone mobilePhone : MobilePhone.filtreBrand(id)) {
+                                System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                        mobilePhone.getId(),
+                                        mobilePhone.getProductName(),
+                                        mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                        mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
+                                        mobilePhone.getRam(), mobilePhone.getColor());
+                                /*System.out.println("| " + mobilePhone.getId() +
                                         "\t| "+ mobilePhone.getProductName() +
                                         "\t| " + mobilePhone.getUnitPrice() +
                                         "\t| " + mobilePhone.getBrandName() +
@@ -119,15 +141,15 @@ public class Main {
                                         "\t| " + mobilePhone.getScreenSize() +
                                         "\t| " + mobilePhone.getBatteryPower() +
                                         "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );
+                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
                                 System.out.println();
                             }
-                        }else {
+                        } else {
                             System.out.println("Hatalı işlem yaptınız.");
                         }
                     }
-                    if(filtre == 2) { }
-                    else {
+                    if (filtre == 2) {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     break;
@@ -136,11 +158,17 @@ public class Main {
                 case 2:
                     System.out.println("\nCep Telefonu Listesi\n");
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
-                    System.out.println("| ID \t| ÜrünAdı \t| Fiyat \t| Marka \t| Depolama \t| Ekran | Pil\t| Ram\t| Renk \t| " );
-
+                    System.out.println(
+                            "| ID | Product Name                   | Price       | Brand      | Storage   | Screen Size  | Battery    | RAM        | COLOR      |");
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
-                    for(MobilePhone mobilePhone : MobilePhone.mobilePhone) {
-                        System.out.println("| " + mobilePhone.getId() +
+                    for (MobilePhone mobilePhone : MobilePhone.mobilePhone) {
+                        System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s | %-10s | %-10s |\n",
+                                mobilePhone.getId(),
+                                mobilePhone.getProductName(),
+                                mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                mobilePhone.getMemory(), mobilePhone.getScreenSize(),mobilePhone.getBatteryPower(),
+                                mobilePhone.getRam(), mobilePhone.getColor());
+                        /*System.out.println("| " + mobilePhone.getId() +
                                 "\t| "+ mobilePhone.getProductName() +
                                 "\t| " + mobilePhone.getUnitPrice() +
                                 "\t| " + mobilePhone.getBrandName() +
@@ -148,7 +176,7 @@ public class Main {
                                 "\t| " + mobilePhone.getScreenSize() +
                                 "\t| " + mobilePhone.getBatteryPower() +
                                 "\t| " + mobilePhone.getRam() +
-                                "\t| " + mobilePhone.getColor() + "\t| " );
+                                "\t| " + mobilePhone.getColor() + "\t| " );*/
                         System.out.println();
                     }
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
@@ -156,11 +184,17 @@ public class Main {
                     System.out.println("Ürün eklemek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     add = input.nextInt();
-                    if(add == 1) {
+                    if (add == 1) {
                         MobilePhone.add();
                         System.out.println("Ürün eklendi");
-                        for(MobilePhone mobilePhone : MobilePhone.mobilePhone) {
-                            System.out.println("| " + mobilePhone.getId() +
+                        for (MobilePhone mobilePhone : MobilePhone.mobilePhone) {
+                            System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                    mobilePhone.getId(),
+                                    mobilePhone.getProductName(),
+                                    mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                    mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
+                                    mobilePhone.getRam(), mobilePhone.getColor());
+                            /*System.out.println("| " + mobilePhone.getId() +
                                     "\t| "+ mobilePhone.getProductName() +
                                     "\t| " + mobilePhone.getUnitPrice() +
                                     "\t| " + mobilePhone.getBrandName() +
@@ -168,45 +202,51 @@ public class Main {
                                     "\t| " + mobilePhone.getScreenSize() +
                                     "\t| " + mobilePhone.getBatteryPower() +
                                     "\t| " + mobilePhone.getRam() +
-                                    "\t| " + mobilePhone.getColor() + "\t| " );
+                                    "\t| " + mobilePhone.getColor() + "\t| " );*/
                             System.out.println();
                         }
                     }
-                    if(add == 2) { }
-                    else {
+                    if (add == 2) {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     System.out.println();
                     System.out.println("Ürün silmek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     delete = input.nextInt();
-                    if(delete == 1) {
+                    if (delete == 1) {
                         System.out.println("Silmek istediğiniz ürünün id sini giriniz : ");
                         System.out.print("Seçim : ");
                         int id = input.nextInt();
-                        if(MobilePhone.remove(id) == true) {
+                        if (MobilePhone.remove(id) == true) {
                             System.out.println("Ürün silindi");
-                        }else {
+                        } else {
                             System.out.println("Ürün silinemedi");
                         }
                     }
-                    if(delete == 2) { }
-                    else {
+                    if (delete == 2) {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     System.out.println();
                     System.out.println("Ürün filtrelemek ister misiniz ? \n1-Evet \n2-Hayır");
                     System.out.print("Seçim : ");
                     filtre = input.nextInt();
-                    if(filtre == 1) {
+                    if (filtre == 1) {
                         System.out.println("Filtreleme için  : \n1-Id \n2-Marka ");
                         System.out.print("Seçim : ");
                         select = input.nextInt();
-                        if(select == 1) {
+                        if (select == 1) {
                             System.out.print("Filtrelemek istediğiniz Id yi giriniz : ");
                             int id = input.nextInt();
-                            for(MobilePhone mobilePhone : MobilePhone.filtreId(id)) {
-                                System.out.println("| " + mobilePhone.getId() +
+                            for (MobilePhone mobilePhone : MobilePhone.filtreId(id)) {
+                                System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                        mobilePhone.getId(),
+                                        mobilePhone.getProductName(),
+                                        mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                        mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
+                                        mobilePhone.getRam(), mobilePhone.getColor());
+                                /*System.out.println("| " + mobilePhone.getId() +
                                         "\t| "+ mobilePhone.getProductName() +
                                         "\t| " + mobilePhone.getUnitPrice() +
                                         "\t| " + mobilePhone.getBrandName() +
@@ -214,13 +254,13 @@ public class Main {
                                         "\t| " + mobilePhone.getScreenSize() +
                                         "\t| " + mobilePhone.getBatteryPower() +
                                         "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );
+                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
                                 System.out.println();
                             }
-                        }else if(select == 2) {
+                        } else if (select == 2) {
                             int i = 1;
-                            for(Brand brand : Brand.brands()) {
-                                System.out.println( i + " - " +brand.getName());
+                            for (Brand brand : Brand.brands()) {
+                                System.out.println(i + " - " + brand.getName());
                                 i++;
                             }
                             System.out.println();
@@ -228,8 +268,14 @@ public class Main {
                             int id = input.nextInt();
 
 
-                            for(MobilePhone mobilePhone : MobilePhone.filtreBrand(id)) {
-                                System.out.println("| " + mobilePhone.getId() +
+                            for (MobilePhone mobilePhone : MobilePhone.filtreBrand(id)) {
+                                System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
+                                        mobilePhone.getId(),
+                                        mobilePhone.getProductName(),
+                                        mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
+                                        mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
+                                        mobilePhone.getRam(), mobilePhone.getColor());
+                                /*System.out.println("| " + mobilePhone.getId() +
                                         "\t| "+ mobilePhone.getProductName() +
                                         "\t| " + mobilePhone.getUnitPrice() +
                                         "\t| " + mobilePhone.getBrandName() +
@@ -237,17 +283,16 @@ public class Main {
                                         "\t| " + mobilePhone.getScreenSize() +
                                         "\t| " + mobilePhone.getBatteryPower() +
                                         "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );
+                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
                                 System.out.println();
                             }
-                        }else {
+                        } else {
                             System.out.println("Hatalı işlem yaptınız.");
                         }
                     }
-                    if(filtre == 2) {
+                    if (filtre == 2) {
 
-                    }
-                    else {
+                    } else {
                         System.out.println("Hatalı işlem yaptınız.");
                     }
                     break;
@@ -256,13 +301,13 @@ public class Main {
                 case 3:
                     System.out.println("\nMarkalarımız\n");
                     System.out.println("------------\n");
-                    for(Brand brand : Brand.brands()) {
+                    for (Brand brand : Brand.brands()) {
                         System.out.println("- " + brand.getName());
                     }
                     System.out.println();
                     break;
                 case 0:
-                    n =1;
+                    n = 1;
                 default:
                     System.out.println("Hatalı işlem yaptınız.");
                     break;
