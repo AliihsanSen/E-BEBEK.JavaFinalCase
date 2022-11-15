@@ -1,4 +1,5 @@
 package PatikaStore;
+
 import java.util.Scanner;
 
 public abstract class Product {
@@ -16,6 +17,9 @@ public abstract class Product {
     Brand brand;
 
     protected Scanner scanner = new Scanner(System.in);
+
+    public Product() {
+    }
 
     public Product(String name, String color, int id, int discountRatio, int stock, int memory, int ram, double price,
                    double screenSize, Brand brand, Scanner scanner) {
