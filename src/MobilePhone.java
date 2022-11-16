@@ -1,10 +1,9 @@
-package PatikaStore;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class NoteBook {private int id;
+public class MobilePhone {
+    private int id;
     private double unitPrice;
     private double discountRate;
     private int qualityInStock;
@@ -13,11 +12,13 @@ public class NoteBook {private int id;
     private int ram;
     private double screenSize;
     private int memory;
+    private int batteryPower;
+    private String color;
 
-
-
-    public NoteBook(int id, double unitPrice, double discountRate, int qualityInStock,
-                    String productName, String brandName, int ram, double screenSize, int memory) {
+    public MobilePhone(int id, double unitPrice, double discountRate,
+                       int qualityInStock, String productName, String brandName,
+                       int ram, double screenSize, int memory, int batteryPower,
+                       String color) {
         super();
         this.id = id;
         this.unitPrice = unitPrice;
@@ -28,12 +29,18 @@ public class NoteBook {private int id;
         this.ram = ram;
         this.screenSize = screenSize;
         this.memory = memory;
+        this.batteryPower = batteryPower;
+        this.color = color;
     }
 
-    public static List<NoteBook> notebook = new ArrayList<>();
 
-    public static List<NoteBook> add(){
+    public static List<MobilePhone> mobilePhone = new ArrayList<MobilePhone>();
+
+    public static List<MobilePhone> add(){
         Scanner input = new Scanner(System.in);
+
+
+        System.out.println();
 
         System.out.print("ÜrünAdı : ");
         String productName = input.next();
@@ -45,7 +52,7 @@ public class NoteBook {private int id;
 
         int i = 1;
         for(Brand brand : Brand.brands()) {
-            System.out.println( i + brand.getName());
+            System.out.println( i + " - " +brand.getName());
             i++;
         }
         System.out.println();
@@ -66,6 +73,14 @@ public class NoteBook {private int id;
         int ram = input.nextInt();
         System.out.println();
 
+        System.out.print("Pil Gücü : ");
+        int batteryPower = input.nextInt();
+        System.out.println();
+
+        System.out.print("Renk : ");
+        String color = input.next();
+        System.out.println();
+
         String brandname = null;
         for(Brand brand : Brand.brands()) {
             if(brand.getId() == brandid) {
@@ -73,52 +88,55 @@ public class NoteBook {private int id;
             }
         }
         int id =  0;
-        for(NoteBook notebook : notebook) {
-            if(notebook.getId()>id) {
-                id = notebook.getId();
+        for(MobilePhone mobilePhone : mobilePhone) {
+            if(mobilePhone.getId()>id) {
+                id = mobilePhone.getId();
             }
         }
         id++;
-        notebook.add(new NoteBook(id, unitPrice, 0, 0, productName, brandname, ram, screenSize, memory));
-        return notebook;
+        mobilePhone.add(new MobilePhone(id, unitPrice, 0.0, 0, productName, brandname, ram, screenSize, memory,batteryPower,color));
+        return mobilePhone;
     }
 
     public static boolean remove(int id){
         try {
-            notebook.remove(id-1);
+            mobilePhone.remove(id-1);
         } catch (Exception e) {
             return false;
         }
 
         return true;
+
     }
 
-    public static List<NoteBook> filtreId(int id){
-        List<NoteBook> filtreList = new ArrayList<>();
-        for(NoteBook notebook : notebook) {
-            if(notebook.getId() == id){
-                filtreList.add(notebook);
+    public static List<MobilePhone> filtreId(int id){
+        List<MobilePhone> filtreList = new ArrayList<MobilePhone>();
+        for(MobilePhone phone : mobilePhone) {
+            if(phone.getId() == id){
+                filtreList.add(phone);
             }
         }
         return filtreList;
     }
 
-    public static List<NoteBook> filtreBrand(int id){
+    public static List<MobilePhone> filtreBrand(int id){
 
-        List<NoteBook> filtreList = new ArrayList<>();
-        for(NoteBook notebook : notebook) {
-            if(notebook.getBrandName() == Brand.brand(id) ){
-                filtreList.add(notebook);
+        List<MobilePhone> filtreList = new ArrayList<MobilePhone>();
+        for(MobilePhone phone : mobilePhone) {
+            if(phone.getBrandName() == Brand.brand(id) ){
+                filtreList.add(phone);
             }
         }
         return filtreList;
     }
-    public static List<NoteBook> notebooks() {
 
-        notebook.add(new NoteBook(1, 3199.0, 0.0, 5, "HUAWEI Matebook D15", Brand.brand(4), 16, 14, 512));
-        notebook.add(new NoteBook(2,7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
-        notebook.add(new NoteBook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6,2048));
-        return notebook;
+    public static List<MobilePhone> mobilePhones() {
+
+        mobilePhone.add(new MobilePhone(1, 3199, 0.0, 5, "Samsung Galaxy A52", Brand.brand(1), 6, 6.5, 128, 4000, "Siyah"));
+        mobilePhone.add(new MobilePhone(2, 7379, 0.0, 5, "iPhone 12 64 GB", Brand.brand(3), 6, 6.1, 64, 3046, "Mavi"));
+        mobilePhone.add(new MobilePhone(3, 4012, 0.0, 5, "Redmi Note 11 Pro 8GB", Brand.brand(8), 12, 6.5, 128, 4000, "Kırmızı"));
+
+        return mobilePhone;
     }
 
 
@@ -130,12 +148,11 @@ public class NoteBook {private int id;
         this.id = id;
     }
 
-
-    public double  getUnitPrice() {
+    public double getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(double  unitPrice) {
+    public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
 
@@ -195,5 +212,19 @@ public class NoteBook {private int id;
         this.memory = memory;
     }
 
+    public int getBatteryPower() {
+        return batteryPower;
+    }
 
+    public void setBatteryPower(int batteryPower) {
+        this.batteryPower = batteryPower;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
