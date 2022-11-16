@@ -248,7 +248,7 @@ public class Main {
                 case 0:
                     n = 1;
                 default:
-                    System.out.println("Hatalı işlem yaptınız.");
+                    System.out.println("Çıkış Yaptınız. Bizi tercih ettiğiniz için teşekkür ederiz.");
                     break;
             }
         }
