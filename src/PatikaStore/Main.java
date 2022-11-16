@@ -11,6 +11,7 @@ public class Main {
         while (n == 0) {
             Scanner input = new Scanner(System.in);
 
+            System.out.println();
             System.out.println("PatikaStore Ürün Yönetim Paneli !\n");
             System.out.println("1 - Notebook İşlemleri\n"
                     + "2 - Cep Telefonu İşlemleri\n"
@@ -32,13 +33,7 @@ public class Main {
                                 notebook.getProductName(),
                                 notebook.getUnitPrice(), notebook.getBrandName(),
                                 notebook.getMemory(), notebook.getScreenSize(), notebook.getRam());
-                        /*System.out.println("| " +notebook.getId() + "" +
-                                "\t| "+ notebook.getProductName() +
-                                "\t| " + notebook.getUnitPrice() +
-                                "\t| " + notebook.getBrandName() +
-                                "\t| " + notebook.getMemory() +
-                                "\t| " + notebook.getScreenSize() +
-                                "\t| " + notebook.getRam() + "\t| ");*/
+
                         System.out.println();
                     }
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
@@ -54,13 +49,7 @@ public class Main {
                                     notebook.getProductName(),
                                     notebook.getUnitPrice(), notebook.getBrandName(),
                                     notebook.getMemory(), notebook.getScreenSize(), notebook.getRam());
-                            /*System.out.println("| " +notebook.getId() +
-                                    "\t| "+ notebook.getProductName() +
-                                    "\t| " + notebook.getUnitPrice() +
-                                    "\t| " + notebook.getBrandName() +
-                                    "\t| " + notebook.getMemory() +
-                                    "\t| " + notebook.getScreenSize() +
-                                    "\t| " + notebook.getRam() + "\t| ");*/
+
                             System.out.println();
                         }
                     }
@@ -104,15 +93,7 @@ public class Main {
                                         mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                         mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
                                         mobilePhone.getRam(), mobilePhone.getColor());
-                                /*System.out.println("| " + mobilePhone.getId() +
-                                        "\t| "+ mobilePhone.getProductName() +
-                                        "\t| " + mobilePhone.getUnitPrice() +
-                                        "\t| " + mobilePhone.getBrandName() +
-                                        "\t| " + mobilePhone.getMemory() +
-                                        "\t| " + mobilePhone.getScreenSize() +
-                                        "\t| " + mobilePhone.getBatteryPower() +
-                                        "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                                 System.out.println();
                             }
                         } else if (select == 2) {
@@ -133,15 +114,7 @@ public class Main {
                                         mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                         mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
                                         mobilePhone.getRam(), mobilePhone.getColor());
-                                /*System.out.println("| " + mobilePhone.getId() +
-                                        "\t| "+ mobilePhone.getProductName() +
-                                        "\t| " + mobilePhone.getUnitPrice() +
-                                        "\t| " + mobilePhone.getBrandName() +
-                                        "\t| " + mobilePhone.getMemory() +
-                                        "\t| " + mobilePhone.getScreenSize() +
-                                        "\t| " + mobilePhone.getBatteryPower() +
-                                        "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                                 System.out.println();
                             }
                         } else {
@@ -168,15 +141,7 @@ public class Main {
                                 mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                 mobilePhone.getMemory(), mobilePhone.getScreenSize(),mobilePhone.getBatteryPower(),
                                 mobilePhone.getRam(), mobilePhone.getColor());
-                        /*System.out.println("| " + mobilePhone.getId() +
-                                "\t| "+ mobilePhone.getProductName() +
-                                "\t| " + mobilePhone.getUnitPrice() +
-                                "\t| " + mobilePhone.getBrandName() +
-                                "\t| " + mobilePhone.getMemory() +
-                                "\t| " + mobilePhone.getScreenSize() +
-                                "\t| " + mobilePhone.getBatteryPower() +
-                                "\t| " + mobilePhone.getRam() +
-                                "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                         System.out.println();
                     }
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
@@ -194,15 +159,7 @@ public class Main {
                                     mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                     mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
                                     mobilePhone.getRam(), mobilePhone.getColor());
-                            /*System.out.println("| " + mobilePhone.getId() +
-                                    "\t| "+ mobilePhone.getProductName() +
-                                    "\t| " + mobilePhone.getUnitPrice() +
-                                    "\t| " + mobilePhone.getBrandName() +
-                                    "\t| " + mobilePhone.getMemory() +
-                                    "\t| " + mobilePhone.getScreenSize() +
-                                    "\t| " + mobilePhone.getBatteryPower() +
-                                    "\t| " + mobilePhone.getRam() +
-                                    "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                             System.out.println();
                         }
                     }
@@ -246,15 +203,7 @@ public class Main {
                                         mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                         mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
                                         mobilePhone.getRam(), mobilePhone.getColor());
-                                /*System.out.println("| " + mobilePhone.getId() +
-                                        "\t| "+ mobilePhone.getProductName() +
-                                        "\t| " + mobilePhone.getUnitPrice() +
-                                        "\t| " + mobilePhone.getBrandName() +
-                                        "\t| " + mobilePhone.getMemory() +
-                                        "\t| " + mobilePhone.getScreenSize() +
-                                        "\t| " + mobilePhone.getBatteryPower() +
-                                        "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                                 System.out.println();
                             }
                         } else if (select == 2) {
@@ -275,15 +224,7 @@ public class Main {
                                         mobilePhone.getUnitPrice(), mobilePhone.getBrandName(),
                                         mobilePhone.getMemory(), mobilePhone.getScreenSize(), mobilePhone.getBatteryPower(),
                                         mobilePhone.getRam(), mobilePhone.getColor());
-                                /*System.out.println("| " + mobilePhone.getId() +
-                                        "\t| "+ mobilePhone.getProductName() +
-                                        "\t| " + mobilePhone.getUnitPrice() +
-                                        "\t| " + mobilePhone.getBrandName() +
-                                        "\t| " + mobilePhone.getMemory() +
-                                        "\t| " + mobilePhone.getScreenSize() +
-                                        "\t| " + mobilePhone.getBatteryPower() +
-                                        "\t| " + mobilePhone.getRam() +
-                                        "\t| " + mobilePhone.getColor() + "\t| " );*/
+
                                 System.out.println();
                             }
                         } else {
