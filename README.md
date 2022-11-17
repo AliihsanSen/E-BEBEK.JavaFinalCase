@@ -10,5 +10,3 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 [java]: https://www.java.com/
 [github]: https://github.com/AliihsanSen
 [intellij]: https://www.jetbrains.com/idea/download/#section=windows
-
-
