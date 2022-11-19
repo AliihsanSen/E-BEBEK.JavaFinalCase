@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Main {
 
     /*
-
-     */
+    In this class, our classes that we have created according to the case given
+    to us are called. The project we have created is operated from this class.
+    */
 
     public static void main(String[] args) {
         int n = 0;
