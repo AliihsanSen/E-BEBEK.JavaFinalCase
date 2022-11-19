@@ -4,7 +4,13 @@ import java.util.Scanner;
 
 public class MobilePhone {
 
-
+    /*
+    In this class, we have added our mobile phones according to our brands.
+    In order to check that our classroom is working correctly, we added three
+    mobile phones in advance and asked that this be printed out. In addition,
+    our codes are written in a convenient way so that the user can have product deletion,
+    product addition and product filtering features here.
+    */
 
     private int id;
     private double unitPrice;
@@ -39,7 +45,7 @@ public class MobilePhone {
 
     public static List<MobilePhone> mobilePhone = new ArrayList<MobilePhone>();
 
-    public static List<MobilePhone> add(){
+    public static List<MobilePhone> add() {
         Scanner input = new Scanner(System.in);
 
 
@@ -54,8 +60,8 @@ public class MobilePhone {
         System.out.println();
 
         int i = 1;
-        for(Brand brand : Brand.brands()) {
-            System.out.println( i + " - " +brand.getName());
+        for (Brand brand : Brand.brands()) {
+            System.out.println(i + " - " + brand.getName());
             i++;
         }
         System.out.println();
@@ -85,25 +91,25 @@ public class MobilePhone {
         System.out.println();
 
         String brandname = null;
-        for(Brand brand : Brand.brands()) {
-            if(brand.getId() == brandid) {
+        for (Brand brand : Brand.brands()) {
+            if (brand.getId() == brandid) {
                 brandname = brand.getName();
             }
         }
-        int id =  0;
-        for(MobilePhone mobilePhone : mobilePhone) {
-            if(mobilePhone.getId()>id) {
+        int id = 0;
+        for (MobilePhone mobilePhone : mobilePhone) {
+            if (mobilePhone.getId() > id) {
                 id = mobilePhone.getId();
             }
         }
         id++;
-        mobilePhone.add(new MobilePhone(id, unitPrice, 0.0, 0, productName, brandname, ram, screenSize, memory,batteryPower,color));
+        mobilePhone.add(new MobilePhone(id, unitPrice, 0.0, 0, productName, brandname, ram, screenSize, memory, batteryPower, color));
         return mobilePhone;
     }
 
-    public static boolean remove(int id){
+    public static boolean remove(int id) {
         try {
-            mobilePhone.remove(id-1);
+            mobilePhone.remove(id - 1);
         } catch (Exception e) {
             return false;
         }
@@ -112,21 +118,21 @@ public class MobilePhone {
 
     }
 
-    public static List<MobilePhone> filtreId(int id){
+    public static List<MobilePhone> filtreId(int id) {
         List<MobilePhone> filtreList = new ArrayList<MobilePhone>();
-        for(MobilePhone phone : mobilePhone) {
-            if(phone.getId() == id){
+        for (MobilePhone phone : mobilePhone) {
+            if (phone.getId() == id) {
                 filtreList.add(phone);
             }
         }
         return filtreList;
     }
 
-    public static List<MobilePhone> filtreBrand(int id){
+    public static List<MobilePhone> filtreBrand(int id) {
 
         List<MobilePhone> filtreList = new ArrayList<MobilePhone>();
-        for(MobilePhone phone : mobilePhone) {
-            if(phone.getBrandName() == Brand.brand(id) ){
+        for (MobilePhone phone : mobilePhone) {
+            if (phone.getBrandName() == Brand.brand(id)) {
                 filtreList.add(phone);
             }
         }
