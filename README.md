@@ -35,12 +35,14 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 #### ⚡When the user runs the project, they can access the product panel:
 ![image](https://user-images.githubusercontent.com/111094912/202847420-397e4d26-f733-4b37-b4a1-0862e5f5874c.png)
 
-#### ⚡
-#### ⚡
-#### ⚡
-#### ⚡
-#### ⚡
-#### ⚡
-#### ⚡
+#### ⚡When listing products, they should be displayed on the console screen in tabular form (System.out.format() is used).
+![image](https://user-images.githubusercontent.com/111094912/202847479-b85c5611-1f8c-41d5-8016-fd909ed5c910.png)
 
+#### ⚡The user should be able to add products and add the product group (Mobile Phone, Notebook, etc.) should be able to choose.
+![image](https://user-images.githubusercontent.com/111094912/202847519-31c1b44a-5747-4f24-b0d3-edab2c1b9579.png)
 
+#### ⚡The user should be able to delete the products according to their unique numbers.
+![image](https://user-images.githubusercontent.com/111094912/202847534-b1372330-5631-4c77-b65c-098e85a7b320.png)
+
+#### ⚡The user should be able to filter and list products by their unique numbers and brands.
+![image](https://user-images.githubusercontent.com/111094912/202847552-c4ee170e-cd63-40ac-a145-d7dfe4e0d328.png)
