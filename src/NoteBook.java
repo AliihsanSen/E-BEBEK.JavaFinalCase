@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class NoteBook {private int id;
+public class NoteBook {
+
+    private int id;
     private double unitPrice;
     private double discountRate;
     private int qualityInStock;
