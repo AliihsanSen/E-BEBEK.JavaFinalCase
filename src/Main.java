@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int n = 0;
-        NoteBook.notebooks();
+        Notebook.notebooks();
         MobilePhone.mobilePhones();
 
         while (n == 0) {
@@ -25,7 +25,7 @@ public class Main {
                     System.out.println(
                             "| ID | Product Name                  | Price         | Brand     | Storage   | Screen Size  | RAM        |");
                     System.out.println("---------------------------------------------------------------------------------------------------------\n");
-                    for (NoteBook notebook : NoteBook.notebook) {
+                    for (Notebook notebook : Notebook.notebook) {
                         System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
                                 notebook.getId(),
                                 notebook.getProductName(),
@@ -39,9 +39,9 @@ public class Main {
                     System.out.print("Seçim : ");
                     add = input.nextInt();
                     if (add == 1) {
-                        NoteBook.add();
+                        Notebook.add();
                         System.out.println("Ürün eklendi");
-                        for (NoteBook notebook : NoteBook.notebook) {
+                        for (Notebook notebook : Notebook.notebook) {
                             System.out.printf("| %-2s | %-30s| %-10s TL | %-10s| %-10s| %-12s | %-10s |\n",
                                     notebook.getId(),
                                     notebook.getProductName(),
@@ -63,7 +63,7 @@ public class Main {
                         System.out.println("Silmek istediğiniz ürünün id sini giriniz : ");
                         System.out.print("Seçim : ");
                         int id = input.nextInt();
-                        if (NoteBook.remove(id) == true) {
+                        if (Notebook.remove(id) == true) {
                             System.out.println("Ürün silindi");
                         } else {
                             System.out.println("Ürün silinemedi");

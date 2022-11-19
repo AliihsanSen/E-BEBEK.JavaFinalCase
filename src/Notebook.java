@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class NoteBook {
+public class Notebook {
 
     /*
 
@@ -20,7 +20,7 @@ public class NoteBook {
 
 
 
-    public NoteBook(int id, double unitPrice, double discountRate, int qualityInStock,
+    public Notebook(int id, double unitPrice, double discountRate, int qualityInStock,
                     String productName, String brandName, int ram, double screenSize, int memory) {
         super();
         this.id = id;
@@ -34,9 +34,9 @@ public class NoteBook {
         this.memory = memory;
     }
 
-    public static List<NoteBook> notebook = new ArrayList<>();
+    public static List<Notebook> notebook = new ArrayList<>();
 
-    public static List<NoteBook> add(){
+    public static List<Notebook> add(){
         Scanner input = new Scanner(System.in);
 
         System.out.print("ÜrünAdı : ");
@@ -77,13 +77,13 @@ public class NoteBook {
             }
         }
         int id =  0;
-        for(NoteBook notebook : notebook) {
+        for(Notebook notebook : notebook) {
             if(notebook.getId()>id) {
                 id = notebook.getId();
             }
         }
         id++;
-        notebook.add(new NoteBook(id, unitPrice, 0, 0, productName, brandname, ram, screenSize, memory));
+        notebook.add(new Notebook(id, unitPrice, 0, 0, productName, brandname, ram, screenSize, memory));
         return notebook;
     }
 
@@ -97,9 +97,9 @@ public class NoteBook {
         return true;
     }
 
-    public static List<NoteBook> filtreId(int id){
-        List<NoteBook> filtreList = new ArrayList<>();
-        for(NoteBook notebook : notebook) {
+    public static List<Notebook> filtreId(int id){
+        List<Notebook> filtreList = new ArrayList<>();
+        for(Notebook notebook : notebook) {
             if(notebook.getId() == id){
                 filtreList.add(notebook);
             }
@@ -107,21 +107,21 @@ public class NoteBook {
         return filtreList;
     }
 
-    public static List<NoteBook> filtreBrand(int id){
+    public static List<Notebook> filtreBrand(int id){
 
-        List<NoteBook> filtreList = new ArrayList<>();
-        for(NoteBook notebook : notebook) {
+        List<Notebook> filtreList = new ArrayList<>();
+        for(Notebook notebook : notebook) {
             if(notebook.getBrandName() == Brand.brand(id) ){
                 filtreList.add(notebook);
             }
         }
         return filtreList;
     }
-    public static List<NoteBook> notebooks() {
+    public static List<Notebook> notebooks() {
 
-        notebook.add(new NoteBook(1, 3199.0, 0.0, 5, "HUAWEI Matebook D15", Brand.brand(4), 16, 14, 512));
-        notebook.add(new NoteBook(2,7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
-        notebook.add(new NoteBook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6,2048));
+        notebook.add(new Notebook(1, 3199.0, 0.0, 5, "HUAWEI Matebook D15", Brand.brand(4), 16, 14, 512));
+        notebook.add(new Notebook(2,7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
+        notebook.add(new Notebook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6,2048));
         return notebook;
     }
 
