@@ -24,7 +24,17 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 
 ## III-Introduction of the Project:
 #### ⚡id: Unique number of the brand registered in the system
-#### ⚡name: Brand name
+#### ⚡name: Brand nam
+#### ⚡When listing brands, the alphabets should always be listed in order.
+#### ⚡Brands should be added statically from within the code blocks in the following order.
+#### ⚡Brands: Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
+#### ⚡It is planned to sell two types of product groups in the store for the time being. These are: Mobile Phones, Notebooks
+#### ⚡The user can add or delete different product groups later.
+
+## IV-Visualization of the project:
+#### ⚡When the user runs the project, they can access the product panel:
+![image](https://user-images.githubusercontent.com/111094912/202847420-397e4d26-f733-4b37-b4a1-0862e5f5874c.png)
+
 #### ⚡
 #### ⚡
 #### ⚡
@@ -32,4 +42,5 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 #### ⚡
 #### ⚡
 #### ⚡
+
 
