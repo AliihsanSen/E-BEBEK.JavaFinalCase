@@ -23,13 +23,19 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 ⚡With the created reusable methods, it was aimed to comply with the solid principles of the project.
 
 ## III-Introduction of the Project:
-#### ⚡id: Unique number of the brand registered in the system
-#### ⚡name: Brand nam
-#### ⚡When listing brands, the alphabets should always be listed in order.
-#### ⚡Brands should be added statically from within the code blocks in the following order.
-#### ⚡Brands: Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
-#### ⚡It is planned to sell two types of product groups in the store for the time being. These are: Mobile Phones, Notebooks
-#### ⚡The user can add or delete different product groups later.
+⚡id: Unique number of the brand registered in the system
+
+⚡name: Brand name
+
+⚡When listing brands, the alphabets should always be listed in order.
+
+⚡Brands should be added statically from within the code blocks in the following order.
+
+⚡Brands: Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
+
+⚡It is planned to sell two types of product groups in the store for the time being. These are: Mobile Phones, Notebooks
+
+⚡The user can add or delete different product groups later.
 
 ## IV-Visualization of the project:
 #### ⚡When the user runs the project, they can access the product panel:
