@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class Notebook {
 
     /*
-    In this class, we added our computers according to our brands. We added three computers in advance so that we could check that our classroom was working correctly, and we wanted this to be printed out. In addition, our codes are written in a convenient way so that the user can have product deletion, product addition and product filtering features here.
+    In this class, we added our computers according to our brands.
+    We added three computers in advance so that we could check that our classroom
+    was working correctly, and we wanted this to be printed out. In addition,
+    our codes are written in a convenient way so that the user can have product deletion,
+    product addition and product filtering features here.
      */
 
     private int id;
