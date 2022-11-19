@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Notebook {
 
     /*
-
+    In this class, we added our computers according to our brands. We added three computers in advance so that we could check that our classroom was working correctly, and we wanted this to be printed out. In addition, our codes are written in a convenient way so that the user can have product deletion, product addition and product filtering features here.
      */
 
     private int id;
@@ -17,7 +17,6 @@ public class Notebook {
     private int ram;
     private double screenSize;
     private int memory;
-
 
 
     public Notebook(int id, double unitPrice, double discountRate, int qualityInStock,
@@ -36,7 +35,7 @@ public class Notebook {
 
     public static List<Notebook> notebook = new ArrayList<>();
 
-    public static List<Notebook> add(){
+    public static List<Notebook> add() {
         Scanner input = new Scanner(System.in);
 
         System.out.print("ÜrünAdı : ");
@@ -48,8 +47,8 @@ public class Notebook {
         System.out.println();
 
         int i = 1;
-        for(Brand brand : Brand.brands()) {
-            System.out.println( i + brand.getName());
+        for (Brand brand : Brand.brands()) {
+            System.out.println(i + brand.getName());
             i++;
         }
         System.out.println();
@@ -71,14 +70,14 @@ public class Notebook {
         System.out.println();
 
         String brandname = null;
-        for(Brand brand : Brand.brands()) {
-            if(brand.getId() == brandid) {
+        for (Brand brand : Brand.brands()) {
+            if (brand.getId() == brandid) {
                 brandname = brand.getName();
             }
         }
-        int id =  0;
-        for(Notebook notebook : notebook) {
-            if(notebook.getId()>id) {
+        int id = 0;
+        for (Notebook notebook : notebook) {
+            if (notebook.getId() > id) {
                 id = notebook.getId();
             }
         }
@@ -87,9 +86,9 @@ public class Notebook {
         return notebook;
     }
 
-    public static boolean remove(int id){
+    public static boolean remove(int id) {
         try {
-            notebook.remove(id-1);
+            notebook.remove(id - 1);
         } catch (Exception e) {
             return false;
         }
@@ -97,31 +96,32 @@ public class Notebook {
         return true;
     }
 
-    public static List<Notebook> filtreId(int id){
+    public static List<Notebook> filtreId(int id) {
         List<Notebook> filtreList = new ArrayList<>();
-        for(Notebook notebook : notebook) {
-            if(notebook.getId() == id){
+        for (Notebook notebook : notebook) {
+            if (notebook.getId() == id) {
                 filtreList.add(notebook);
             }
         }
         return filtreList;
     }
 
-    public static List<Notebook> filtreBrand(int id){
+    public static List<Notebook> filtreBrand(int id) {
 
         List<Notebook> filtreList = new ArrayList<>();
-        for(Notebook notebook : notebook) {
-            if(notebook.getBrandName() == Brand.brand(id) ){
+        for (Notebook notebook : notebook) {
+            if (notebook.getBrandName() == Brand.brand(id)) {
                 filtreList.add(notebook);
             }
         }
         return filtreList;
     }
+
     public static List<Notebook> notebooks() {
 
         notebook.add(new Notebook(1, 3199.0, 0.0, 5, "HUAWEI Matebook D15", Brand.brand(4), 16, 14, 512));
-        notebook.add(new Notebook(2,7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
-        notebook.add(new Notebook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6,2048));
+        notebook.add(new Notebook(2, 7379.0, 0.0, 5, "LENOVO V15  ", Brand.brand(2), 8, 14, 1024));
+        notebook.add(new Notebook(3, 4012.0, 0.0, 5, "ASUS Tuf Gaming F15", Brand.brand(6), 32, 15.6, 2048));
         return notebook;
     }
 
@@ -135,11 +135,11 @@ public class Notebook {
     }
 
 
-    public double  getUnitPrice() {
+    public double getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(double  unitPrice) {
+    public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
 
