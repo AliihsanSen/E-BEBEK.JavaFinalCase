@@ -11,4 +11,11 @@ This project is the Patika dev & ebebek Java & QA & SAP Spartacus Practicum was 
 [github]: https://github.com/AliihsanSen
 [intellij]: https://www.jetbrains.com/idea/download/#section=windows
 
+## About the project
+⚡The Case given by the company was made in accordance with Object Oriented Programming (OOP) using the Java language because there was a specific language request from us in the Case given by the company.
 
+⚡Nothing much was done by adhering to the Case that was asked to be done one-on-one.
+
+⚡In order to conveniently check that the verification steps have taken place, the output has been taken on the console.
+
+⚡
