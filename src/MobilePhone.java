@@ -3,6 +3,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MobilePhone {
+
+
+
     private int id;
     private double unitPrice;
     private double discountRate;

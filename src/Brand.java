@@ -1,10 +1,12 @@
 import java.util.TreeSet;
 
 public class Brand implements Comparable<Brand>{
+
     /*
     We have added the brands given to us in this class in the desired way.
     Then we searched for the brands we added to our main class in letter order.
      */
+
     private int id;
     private String name;
 
